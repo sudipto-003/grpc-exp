@@ -26,4 +26,4 @@ jobs:
         with:
           context: expunary
           push: true
-          tags: unary:stable
+          tags: sudipto003/unary:stable
