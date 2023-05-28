@@ -6,7 +6,7 @@ GRPC_OUT_FLAGS = --go-grpc_out=. --go-grpc_opt=module=github.com/sudipto-003/grp
 build: expunary
 
 expunary: proto/asmd.pb.go server/main.go client/main.go
-	go build -o bin/unary/server ./server
+	# go build -o bin/unary/server ./server
 	go build -o bin/unary/client ./client
 
 proto/asmd.pb.go: proto/asmd.proto

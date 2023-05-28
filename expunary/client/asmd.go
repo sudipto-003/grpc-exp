@@ -19,18 +19,39 @@ func callAdd(c pb.ASMDServiceClient) {
 	}
 
 	log.Printf("Add: %d\n", add.Val)
+}
+
+func callSub(c pb.ASMDServiceClient) {
+	req := &pb.CalcRequest{
+		Var1: 10,
+		Var2: 5,
+	}
 
 	sub, err := c.Sub(context.Background(), req)
 	if err != nil {
 		log.Panicf("Could not call Sub: %v\n", err)
 	}
 	log.Printf("Sub: %d\n", sub.Val)
+}
 
+func callMul(c pb.ASMDServiceClient) {
+	req := &pb.CalcRequest{
+		Var1: 10,
+		Var2: 5,
+	}
 	mul, err := c.Mul(context.Background(), req)
+
 	if err != nil {
 		log.Panicf("Could not call Mul: %v\n", err)
 	}
 	log.Printf("Mul: %d\n", mul.Val)
+}
+
+func callDiv(c pb.ASMDServiceClient) {
+	req := &pb.CalcRequest{
+		Var1: 10,
+		Var2: 5,
+	}
 
 	div, err := c.Div(context.Background(), req)
 	if err != nil {
