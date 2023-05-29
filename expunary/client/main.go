@@ -9,7 +9,7 @@ import (
 	pb "github.com/sudipto-003/grpc-exp/expunary/proto"
 )
 
-var grpc_addr string = "0.0.0.0:5000"
+var grpc_addr string = "35.247.2.220:80"
 
 func main() {
 	conn, err := grpc.Dial(grpc_addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
