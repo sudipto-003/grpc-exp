@@ -1,6 +1,6 @@
 commType: unary
 
-replicaCount: 3
+replicaCount: 2
 
 image:
   name: sudipto003/unary
